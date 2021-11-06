@@ -52,19 +52,16 @@
             </div>
             <div class="gh-head-actions">
                 <div class="gh-social">
+                    <a class="gh-social-linkedin" href="https://www.linkedin.com/in/igorbulyga/" title="LinkedIn" target="_blank" rel="noopener">{{> "icons/linkedin"}}</a>
                     {{#if @site.facebook}}
                         <a class="gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
                     {{/if}}
                     {{#if @site.twitter}}
                         <a class="gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
                     {{/if}}
+                    <a class="gh-social-email" href="mailto:shield47@gmail.com" title="Email" target="_blank" rel="noopener">{{> "icons/email"}}</a>
+                    <a class="gh-social-telegram" href="https://t.me/igorbulyga" title="Telegram" target="_blank" rel="noopener">{{> "icons/telegram"}}</a>
                 </div>
-
-                {{#unless @member}}
-                    <a class="gh-head-button" href="#/portal/signup">Subscribe</a>
-                {{else}}
-                    <a class="gh-head-button" href="#/portal/account">Account</a>
-                {{/unless}}
             </div>
         </nav>
     </header>
@@ -77,11 +74,13 @@
     {{!-- The global footer at the very bottom of the screen --}}
     <footer class="site-footer outer">
         <div class="inner">
-            <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="copyright">
+                <a href="{{@site.url}}">{{@site.title}}
+                </a> &copy; {{date format="YYYY"}}
+            </section>
             <nav class="site-footer-nav">
                 {{navigation type="secondary"}}
             </nav>
-            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
         </div>
     </footer>
 
